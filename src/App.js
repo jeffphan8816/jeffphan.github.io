@@ -1,6 +1,5 @@
-
 import './App.css';
-import Header from "./components/Header/header";
+import Header from "./components/Header/Header";
 import Nav from "./components/Nav/nav";
 import About from "./components/About/about";
 import Experience from "./components/Experience/experience";
@@ -23,9 +22,9 @@ function App() {
             <Testimonials/>
             <Contact/>
             <Footer/>
-
         </div>
     );
 }
+
 
 export default App;
