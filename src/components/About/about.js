@@ -60,7 +60,6 @@ const About = () => {
                                 <li>Music</li>
                             </ul>
                         </article>
-
                     </div>
                     <p>
                         lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut
@@ -68,9 +67,7 @@ const About = () => {
                         tincidunt, nunc
                     </p>
                     <a href="#contact" className="btn btn-primary">Let's talk</a>
-
                 </div>
-
             </div>
         </section>
     );

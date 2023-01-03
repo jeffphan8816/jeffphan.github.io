@@ -7,6 +7,7 @@ import {RiServiceLine} from 'react-icons/ri';
 import {MdContactMail} from 'react-icons/md';
 
 const Nav = () => {
+
     const [activeNav, setActiveNav] = React.useState('#');
     return (
         <nav>
@@ -23,5 +24,4 @@ const Nav = () => {
         </nav>
     );
 }
-
 export default Nav;

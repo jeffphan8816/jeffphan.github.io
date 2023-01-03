@@ -40,8 +40,7 @@
 .about__card {
     background: var(--color-bg-variant);
     border-radius: 1rem;
-    padding: 1.5rem;
-    /*box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);*/
+    padding: 2rem;
     transition: var(--transition);
     text-align: center;
     border: 2px solid transparent;
@@ -51,6 +50,7 @@
     background: transparent;
     border-color: var(--color-primary-variant);
     margin-bottom: 1rem;
+    cursor: default;
 }
 
 .about__icon {
@@ -74,22 +74,31 @@
 @media screen and (max-width: 1024px) {
     .about__container {
         grid-template-columns: 1fr;
-        /*gap: 0;*/
+        gap: 0;
     }
 
     .about__me {
         width: 50%;
-        margin: 2rem auto 2rem;
+        margin: 2rem auto 4rem;
     }
 
     .about__content p {
-        margin: 1rem 0 1.6rem;
+        margin: 1rem 0 1.5rem;
     }
+
+    .about__content a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 /* media queries (small devices) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .about__me {
         width: 65%;
+        margin: 0 auto 3rem;
     }
+
 }
