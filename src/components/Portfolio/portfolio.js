@@ -1,87 +1,99 @@
 import React from "react";
-import './portfolio.css';
-import IMG1 from '../../assets/portfolio1.jpg';
-import IMG2 from '../../assets/portfolio2.jpg';
-import IMG3 from '../../assets/portfolio3.jpg';
-import IMG4 from '../../assets/portfolio4.jpg';
-import IMG6 from '../../assets/portfolio6.jpg';
-import IMG5 from '../../assets/portfolio5.png';
-
+import "./portfolio.css";
+import IMG1 from "../../assets/portfolio1.png";
+import IMG2 from "../../assets/portfolio2.png";
+import IMG3 from "../../assets/portfolio3.png";
+import IMG4 from "../../assets/portfolio4.png";
 
 /* sample data */
 const portfolioData = [
-    {
-        id: 1,
-        title: 'Portfolio 1',
-        image: IMG1,
-        github: '',
-        demo: '',
-    },
-    {
-        id: 2,
-        title: 'Portfolio 2',
-        image: IMG2,
-        github: '',
-        demo: '',
-    },
-    {
-        id: 3,
-        title: 'Portfolio 3',
-        image: IMG3,
-        github: '',
-        demo: '',
-    },
-    {
-        id: 4,
-        title: 'Portfolio 4',
-        image: IMG4,
-        github: '',
-        demo: '',
-    },
-    {
-        id: 5,
-        title: 'Portfolio 5',
-        image: IMG5,
-        github: '',
-        demo: '',
-    },
-    {
-        id: 6,
-        title: 'Portfolio 6',
-        image: IMG6,
-        github: '',
-        demo: '',
-    }
-]
+  {
+    id: 1,
+    title: "RMIT Nebula (RMIT Live Library - Capstone Project)",
+    image: IMG1,
+    github: "https://github.com/nebula-analytics",
+    demo: "https://rmit-nebula.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Social Media App (MERN Fullstack App) ",
+    image: IMG2,
+    github: "https://github.com/jeffphan8816/socialmediafrontend",
+    github2: "https://github.com/jeffphan8816/socialmediabackend",
+    demo: "",
+  },
+  {
+    id: 3,
+    title: "E-commerce App (ReactJS + Stripe + Strapi)",
+    image: IMG3,
+    github: "https://github.com/jeffphan8816/ecommerce-app-server",
+    github2: "https://github.com/jeffphan8816/ecommerce-app-client",
+    demo: "",
+  },
+  {
+    id: 4,
+    title: "Portfolio",
+    image: IMG4,
+    github: "https://github.com/jeffphan8816/portfolio",
+    demo: "https://jeffphan8816.github.io/portfolio/",
+  },
+];
 
 const Portfolio = () => {
-    return (
-        <section id='portfolio'>
-            <h5>My Recent Work</h5>
-            <h2>Portfolio</h2>
+  return (
+    <section id="portfolio">
+      <h5>My Recent Work</h5>
+      <h2>Portfolio</h2>
 
-            <div className="container portfolio__container">
-                {
-                    portfolioData.map((item) => {
-                        return (
-                            <article className="portfolio__card" key={item.id}>
-                                <div className="portfolio__card-image">
-                                    <img src={item.image} alt={item.title}/>
+      <div className="container portfolio__container">
+        {portfolioData.map((item) => {
+          return (
+            <article className="portfolio__card" key={item.id}>
+              <div className="portfolio__card-image">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <h3>{item.title}</h3>
+              <div className="portfolio__card-details">
+                <a
+                  href={item.github}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
 
-                                </div>
-                                <h3>{item.title}</h3>
-                                <div className="portfolio__card-details">
-                                    <a href={item.github} className="btn" target="_blank" rel="noreferrer">Github</a>
-                                    <a href={item.demo} className="btn btn-primary" target={"_blank"} rel="noreferrer">Live
-                                        Demo</a>
-                                </div>
-                            </article>
-                        )
-                    })
-                }
-            </div>
-        </section>
-    );
-}
+                {item.github2 ? (
+                  <a
+                    href={item.github2}
+                    className="btn"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Github 2
+                  </a>
+                ) : (
+                  <></>
+                )}
+                {item.demo ? (
+                  <a
+                    href={item.demo}
+                    className="btn btn-primary"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                ) : (
+                  <></>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 export default Portfolio;

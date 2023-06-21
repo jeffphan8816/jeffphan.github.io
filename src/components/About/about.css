@@ -1,12 +1,12 @@
 .about__container {
     display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%
+    grid-template-columns: 35% 65%;
+    gap: 5%
 }
 
 
 .about__me {
-    width: 100%;
+    width: 90%;
     aspect-ratio: 1/1;
     border-radius: 2rem;
     background: linear-gradient(
@@ -21,6 +21,8 @@
 
 .about__me-image {
     border-radius: 2rem;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     transform: rotate(-10deg);
     transition: var(--transition);
@@ -34,7 +36,7 @@
 .about__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .about__card {
@@ -43,7 +45,7 @@
     padding: 2rem;
     transition: var(--transition);
     text-align: center;
-    border: 2px solid transparent;
+    border: 2px solid white;
 }
 
 .about__card:hover {
@@ -61,6 +63,15 @@
 
 .about__card h5 {
     font-size: 0.7rem;
+}
+
+.about__ul {
+    /* list-style: upper-alpha; */
+    padding: 0;
+    margin: 0;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    margin-top: 0.5rem;
 }
 
 .about__content p {
