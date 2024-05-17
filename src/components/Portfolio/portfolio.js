@@ -4,18 +4,26 @@ import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio3.png";
 import IMG4 from "../../assets/portfolio4.png";
+import IMG5 from "../../assets/system_architecture.png";
 
 /* sample data */
 const portfolioData = [
   {
     id: 1,
+    title: "Real-time Data Streaming",
+    image: IMG5,
+    github: "https://github.com/jeffphan8816/data-engineer",
+    demo: "",
+  },
+  {
+    id: 2,
     title: "RMIT Nebula (RMIT Live Library - Capstone Project)",
     image: IMG1,
     github: "https://github.com/nebula-analytics",
     demo: "https://rmit-nebula.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Social Media App (MERN Fullstack App) ",
     image: IMG2,
     github: "https://github.com/jeffphan8816/socialmediafrontend",
@@ -23,7 +31,7 @@ const portfolioData = [
     demo: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "E-commerce App (ReactJS + Stripe + Strapi)",
     image: IMG3,
     github: "https://github.com/jeffphan8816/ecommerce-app-server",
@@ -31,7 +39,7 @@ const portfolioData = [
     demo: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio",
     image: IMG4,
     github: "https://github.com/jeffphan8816/portfolio",
